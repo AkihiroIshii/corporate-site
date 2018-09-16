@@ -5,7 +5,7 @@ html {
 }
 
 @mixin fontsize($size: 24, $base: 10) {
-    fort-size: $size + px;
+    font-size: $size + px;
     font-size: ($size / $base) * 1rem;
 }
 
@@ -13,11 +13,12 @@ $ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ
 $blue1 : #42b9d0;
 $blue2 : #339fd1;
 $gray_blue : #eaf2f4;
+$gray_black : #626262;
 
 header {
     background: $gray_blue;
     
-    header_in{
+    #header_in{
         padding-top: 10px;
         padding-bottom: 4px;
     }
@@ -177,6 +178,90 @@ header {
         }
     }
     // min-width: 551px
+}
+
+#sub_cover {
+  text-align: center;
+  padding: 40px 0;
+  
+  //retina_bg
+  
+  background-image: url("../images/news/sub_cover.jpg");
+  background-size: cover;
+  
+  h2 {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 0.2rem;
+  }
+  
+  @media screen and (-webkit-min-device-pixel-ratio:2),(min-resolution: 2dppx) {
+    background-image: url("../images/news/sub_cover@2x.jpg");
+  }
+  
+  @media (min-width: 551px) {
+    text-align: left;
+    height: 420px;
+    padding: 0;
+  
+    img {
+      margin-top: 180px;
+      margin-left: 70px;
+    }
+  }
+  // min-width: 551px
+}
+
+#contents {
+  padding-top: 20px;
+  
+  #main {
+    
+    .news_li {
+      
+      li {
+        list-style: none;
+        
+        span {
+          color: $blue1;
+          display: block;
+          font-weight: bold;
+          margin-bottom: 3px;
+        }
+        
+      }
+    }
+    h2 {
+      color: $blue1;
+      border-bottom: 3px solid $blue1;
+      font-size: 15px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding-bottom: 15px;
+    }
+    
+    th, td {
+      padding: 20px 0;
+      color: $gray-black;
+      font-size: 14px;
+      font-size: 1.4rem;
+    }
+    th {
+      padding-right: 20px;
+    }
+  }
+  
+  #sidebar {
+    .pc_sidemenu {
+      @media (max-width: 550px) {
+        display: none;
+      }
+    }
+  }
 }
 
 #service_area{
@@ -430,4 +515,10 @@ footer{
 h1{
   margin: 0;
   padding: 0;
+}
+
+h2{
+  font-size: 3.6rem;
+  line-height: 1.25;
+  letter-spacing: .1rem;
 }
