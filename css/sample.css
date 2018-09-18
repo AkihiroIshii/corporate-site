@@ -211,6 +211,16 @@ header .sp_navi_li li a {
   font-weight: bold;
   padding-bottom: 15px;
 }
+@media (min-width: 550px) {
+  #contents #main h2 {
+    font-size: 20px;
+    font-size: 2rem;
+    padding-bottom: 20px;
+  }
+}
+#contents #main h2.company_title {
+  margin-bottom: 0px;
+}
 #contents #main th, #contents #main td {
   padding: 20px 0;
   color: #626262;
@@ -425,7 +435,7 @@ h1 {
 h2 {
   font-size: 3.6rem;
   line-height: 1.25;
-  letter-spacing: .1rem;
+  letter-spacing: -.1rem;
 }
 
 /*# sourceMappingURL=sample.css.map */
